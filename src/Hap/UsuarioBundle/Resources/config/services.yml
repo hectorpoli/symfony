@@ -1,0 +1,4 @@
+services:
+#    hap_usuario.example:
+#        class: Hap\UsuarioBundle\Example
+#        arguments: ["@service_id", "plain_value", %parameter%]

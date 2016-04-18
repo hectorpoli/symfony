@@ -1,0 +1,3 @@
+hap_usuario_homepage:
+    path:     /
+    defaults: { _controller: HapUsuarioBundle:Default:index }
