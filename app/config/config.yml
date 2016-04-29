@@ -35,6 +35,8 @@ framework:
 twig:
     debug:            "%kernel.debug%"
     strict_variables: "%kernel.debug%"
+    globals:
+        fos_csrf_provider: "@form.csrf_provider"
 
 # Doctrine Configuration
 doctrine:
@@ -70,6 +72,9 @@ fos_user:
     db_driver: orm # other valid values are 'mongodb', 'couchdb' and 'propel'
     firewall_name: main
     user_class: Hap\UsuarioBundle\Entity\User
+    registration:
+        form:
+            type: Hap\UsuarioBundle\Form\RegistrationFormType
 
 assetic:
     debug:          "%kernel.debug%"

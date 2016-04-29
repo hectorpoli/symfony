@@ -1,3 +1,7 @@
 hap_usuario_homepage:
     path:     /
     defaults: { _controller: HapUsuarioBundle:Default:index }
+
+register:
+    path:     /register
+    defaults: { _controller: HapUsuarioBundle:Registration:register }
