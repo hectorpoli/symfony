@@ -14,12 +14,12 @@ class RegistrationFormType extends AbstractType
         //parent::buildForm($builder, $options);
         // add your custom field
         $builder
-            ->add('name','text',array('label' => 'Nombre:','attr' => array('class' => 'form-control')))
-            ->add('email', LegacyFormHelper::getType('Symfony\Component\Form\Extension\Core\Type\EmailType'), array('label' => 'form.email', 'translation_domain' => 'FOSUserBundle','attr' => array('class' => 'form-control')))
-            ->add('username', null, array('label' => 'form.username', 'translation_domain' => 'FOSUserBundle','attr' => array('class' => 'form-control')))
+            ->add('name','text',array('label' => 'Nombre:','attr' => array('class' => 'form-control','placeholder' => 'Nombre')))
+            ->add('email', LegacyFormHelper::getType('Symfony\Component\Form\Extension\Core\Type\EmailType'), array('label' => 'form.email', 'translation_domain' => 'FOSUserBundle','attr' => array('class' => 'form-control','placeholder' => 'Email')))
+            ->add('username', null, array('label' => 'form.username', 'translation_domain' => 'FOSUserBundle','attr' => array('class' => 'form-control','placeholder' => 'Usuario')))
             ->add('plainPassword', LegacyFormHelper::getType('Symfony\Component\Form\Extension\Core\Type\RepeatedType'), array(
                 'type' => LegacyFormHelper::getType('Symfony\Component\Form\Extension\Core\Type\PasswordType'),
-                'options' => array('translation_domain' => 'FOSUserBundle','attr' => array('class' => 'form-control')),
+                'options' => array('translation_domain' => 'FOSUserBundle','attr' => array('class' => 'form-control','placeholder' => 'Contraseña')),
                 'first_options' => array('label' => 'form.password'),
                 'second_options' => array('label' => 'form.password_confirmation'),
                 'invalid_message' => 'fos_user.password.mismatch'))

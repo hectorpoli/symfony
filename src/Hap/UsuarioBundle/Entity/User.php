@@ -49,6 +49,20 @@ class User extends BaseUser
     protected $groups;
 
 
+    /**
+     * 
+     * @Assert\NotBlank(message="Por favor introduce tu nombre.", groups={"Registration", "ResetPassword", "ChangePassword"})
+     * @Assert\Length(
+     *     min=6,
+     *     max="12",
+     *     minMessage="La contraseña es muy corta.",
+     *     maxMessage="La contraseña es muy larga.",
+     *     groups={"Registration", "Profile", "ResetPassword", "ChangePassword"}
+     * )
+     */
+    protected $plainPassword;
+
+
 
     /**
      * Get id

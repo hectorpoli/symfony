@@ -16,6 +16,16 @@
                     {{ 'layout.logged_in_as'|trans({'%username%': app.user.username}, 'FOSUserBundle') }}
                     </p>
                     <li>
+                        <a href="{{ path('fos_user_profile_show') }}">
+                            Perfil
+                        </a>
+                    </li>
+                    <li>
+                        <a href="{{ path('fos_user_change_password') }}">
+                            Cambiar Contraseña
+                        </a>
+                    </li>
+                    <li>
                         <a href="{{ path('fos_user_security_logout') }}">
                             {{ 'layout.logout'|trans({}, 'FOSUserBundle') }}
                         </a>
